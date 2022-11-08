@@ -10,15 +10,13 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-3/4 mx-auto mt-20 p-10  rounded-2xl shadow-2xl">
-        <h1 className="text-5xl pt-5 text-blue-300 font-bold text-center">
+      <div className="w-3/4 mx-auto mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-600 rounded-2xl shadow-2xl">
+        <h1 className="text-5xl pt-5 text-blue-800 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
           fine pictures of a very wonderful subject; you cannot do it by not
           being lost yourself."
-          <div className="w-full mx-auto">
-            <span className="text-2xl text-red-400 text-center">
-              - Dorothea Lange
-            </span>
+          <div className="text-end ">
+            <span className="text-2xl text-red-600">- Dorothea Lange</span>
           </div>
         </h1>
       </div>

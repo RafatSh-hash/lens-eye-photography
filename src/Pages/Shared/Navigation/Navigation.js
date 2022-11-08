@@ -41,6 +41,18 @@ const Navigation = () => {
           <Link className="font-bold" to="/blog">
             Blog
           </Link>
+          {user ? (
+            <>
+              <Link className="font-bold" to="/myreviews">
+                My Reviews
+              </Link>
+              <Link className="font-bold" to="/addService">
+                Add Service
+              </Link>
+            </>
+          ) : (
+            <></>
+          )}
         </Navbar.Collapse>
         <div className="flex">
           <div className="">
