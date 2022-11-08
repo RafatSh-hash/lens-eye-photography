@@ -1,6 +1,8 @@
 import { Avatar, Button, Navbar } from "flowbite-react";
 import React, { useContext } from "react";
+import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import logo from "../../../Assets/logo.jpg";
 import { AuthContext } from "../../../Context/Context";
 
@@ -9,7 +11,11 @@ const Navigation = () => {
 
   const handleLogOut = () => {
     logOut()
-      .then(() => {})
+      .then(() => {
+        toast("Logged out Successfully !", {
+          position: "top-center",
+        });
+      })
       .catch((e) => console.log(e));
   };
 
@@ -40,6 +46,7 @@ const Navigation = () => {
                   <Button onClick={handleLogOut} gradientDuoTone="purpleToBlue">
                     Log Out
                   </Button>
+                  <Toaster />
                   <img
                     className="w-10 h-10 rounded-full mx-3"
                     src={user?.photoURL}

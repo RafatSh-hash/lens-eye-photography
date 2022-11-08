@@ -29,10 +29,8 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         setUser(user);
-        toast.success("Successfully Loged In!");
-
         navigate(from, { replace: true });
-
+        toast.success("Successfully Loged In!");
         form.reset();
       })
       .catch((e) => {
