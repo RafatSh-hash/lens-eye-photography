@@ -24,6 +24,7 @@ const Login = () => {
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
+    //Login with email and password
     console.log(email, password);
     loginWithEmailPass(email, password)
       .then((result) => {
@@ -40,6 +41,8 @@ const Login = () => {
         toast.error("Wrong Credentials ");
       });
   };
+
+  //Login with Google
   const handleGoogleLogin = () => {
     googleLogin()
       .then((result) => {
