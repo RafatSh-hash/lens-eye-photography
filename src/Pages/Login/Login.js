@@ -2,11 +2,10 @@ import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import login from "../../Assets/login.json";
 import ParticlesBg from "particles-bg";
-import { FaBeer, FaGoogle } from "react-icons/fa";
+import toast, { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import AOS from "aos";
 const Login = () => {
   AOS.init({ duration: 500 });
@@ -39,6 +38,7 @@ const Login = () => {
       .catch((e) => {
         console.log(e);
         setError(e.message);
+        toast.error("Wrong Credentials ");
       });
   };
   const handleGoogleLogin = () => {
@@ -117,10 +117,12 @@ const Login = () => {
             </div>
             <button
               type="submit"
+              // onClick={notify}
               className="text-white w-full bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
             >
               Login
             </button>
+            <Toaster />
 
             <button
               onClick={handleGoogleLogin}
