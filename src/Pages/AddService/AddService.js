@@ -1,5 +1,6 @@
 import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import React, { useContext } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { AuthContext } from "../../Context/Context";
 
 const AddService = () => {
@@ -36,7 +37,7 @@ const AddService = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowleged) {
-          alert("service created successfully");
+          toast.success("service created successfully");
         }
       });
   };
@@ -124,6 +125,7 @@ const AddService = () => {
           <Button type="submit" gradientMonochrome="info">
             Info
           </Button>
+          <Toaster />
         </div>
       </form>
     </div>
