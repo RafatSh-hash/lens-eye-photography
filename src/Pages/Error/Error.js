@@ -2,7 +2,9 @@ import React from "react";
 import Lottie from "lottie-react";
 import error from "../../Assets/ERR.json";
 import { Link } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 const Error = () => {
+  useTitle("Error");
   return (
     <div className="w-9/11 mx-auto h-auto items-center mb-10">
       <div>

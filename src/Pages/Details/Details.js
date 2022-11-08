@@ -1,28 +1,57 @@
-import { Accordion, Card, Table } from "flowbite-react";
-import React from "react";
+import { Button, Card, Label, TextInput } from "flowbite-react";
+import React, { useContext, useEffect } from "react";
+import { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../Context/Context";
+import useTitle from "../../Hooks/useTitle";
 
 const Details = () => {
+  useTitle("Service Details");
   const service = useLoaderData();
-  console.log(service);
-  const {
-    name,
-    image,
-    _id,
-    R1Name,
-    R2Name,
-    R3Name,
-    description,
-    author,
-    avatarimg,
-    rating,
-    reveiwA,
-    reveiwB,
-    reveiwC,
-    review1img,
-    review2img,
-    review3img,
-  } = service;
+  const { user } = useContext(AuthContext);
+
+  const [reviews, setReviews] = useState([]);
+
+  const { name, image, _id, description, author, avatarimg, rating } = service;
+
+  const addReview = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const serviceName = form.serviceName.value;
+    const photoURL = user.photoURL;
+    const Username = user.displayName;
+    const review = form.review.value;
+    const serviceID = _id;
+    const userEmail = user.email;
+
+    console.log(serviceID, serviceName, photoURL, Username, review, userEmail);
+    const userReview = {
+      serviceID,
+      serviceName,
+      photoURL,
+      Username,
+      review,
+      userEmail,
+    };
+
+    fetch("http://localhost:1000/usersReview", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(userReview),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.acknowledged) {
+          toast.success("Review Posted successfully!");
+          form.reset();
+        }
+      });
+  };
+
   return (
     <div>
       <h1 className="text-3xl my-10 text-center text-blue-500">
@@ -54,7 +83,60 @@ const Details = () => {
       <h1 className="text-2xl mt-10 text-center py-10 text-black">
         Reviews are shown below about {service.name}
       </h1>
-      <div className="w-3/4 mx-auto"></div>
+      <div className="w-1/2 mx-auto">
+        <form onSubmit={addReview} className="flex flex-col gap-4">
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="small" value="User Name" />
+            </div>
+            <TextInput
+              defaultValue={user?.displayName}
+              readOnly
+              id="small"
+              type="text"
+              name="name"
+              sizing="sm"
+            />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="small" value="User Photo URL" />
+            </div>
+            <TextInput
+              defaultValue={user?.photoURL}
+              id="small"
+              type="text"
+              name="photoURL"
+              sizing="sm"
+            />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="base" value="Service Name" />
+            </div>
+            <TextInput
+              defaultValue={service.name}
+              readOnly
+              id="base"
+              type="text"
+              name="serviceName"
+              sizing="md"
+            />
+          </div>
+          <div>
+            <div className="mb-2 block">
+              <Label htmlFor="large" value="Review" />
+            </div>
+            <TextInput id="large" type="text" name="review" sizing="lg" />
+          </div>
+          <div className="w-1/2 mx-auto">
+            <Button type="submit" gradientMonochrome="info">
+              Submit
+            </Button>
+            <Toaster></Toaster>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

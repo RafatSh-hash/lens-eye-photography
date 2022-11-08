@@ -4,8 +4,10 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 import { Link, useLoaderData } from "react-router-dom";
 import Service from "../Services/Service";
+import useTitle from "../../Hooks/useTitle";
 
 const AllServices = () => {
+  useTitle("All Services");
   AOS.init({ duration: 500 });
   const services = useLoaderData();
   return (

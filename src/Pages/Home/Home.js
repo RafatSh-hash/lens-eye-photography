@@ -1,9 +1,11 @@
 import { Button, Carousel } from "flowbite-react";
 import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
+import useTitle from "../../Hooks/useTitle";
 import Service from "../Services/Service";
 
 const Home = () => {
+  useTitle("Lens Eye Photography");
   const services = useLoaderData();
 
   return (

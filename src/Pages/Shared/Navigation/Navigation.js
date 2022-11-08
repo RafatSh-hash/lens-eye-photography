@@ -30,13 +30,17 @@ const Navigation = () => {
         </Navbar.Brand>
 
         <Navbar.Collapse>
-          <Link to="/home" active={true}>
+          <Link className="font-bold" to="/home" active={true}>
             Home
           </Link>
-          <Link to="/navbars">About</Link>
-          <Link to="/allservices">Services</Link>
-          <Link to="/navbars">Pricing</Link>
-          <Link to="/blog">Blog</Link>
+
+          <Link className="font-bold" to="/allservices">
+            Services
+          </Link>
+
+          <Link className="font-bold" to="/blog">
+            Blog
+          </Link>
         </Navbar.Collapse>
         <div className="flex">
           <div className="">
