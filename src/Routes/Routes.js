@@ -57,13 +57,7 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/services/:id",
-        element: <Details></Details>,
-        loader: ({ params }) => {
-          return fetch(`http://localhost:1000/services/${params.id}`);
-        },
-      },
+
       {
         path: "*",
         element: <Error></Error>,
