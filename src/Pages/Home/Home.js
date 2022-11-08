@@ -10,8 +10,8 @@ const Home = () => {
 
   return (
     <div>
-      <div className="w-3/4 mx-auto mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-600 rounded-2xl shadow-2xl">
-        <h1 className="text-5xl pt-5 text-blue-800 font-bold text-center">
+      <div className="w-3/4 mx-auto border-2 border-black mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl">
+        <h1 className="text-5xl pt-5 text-blue-700 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
           fine pictures of a very wonderful subject; you cannot do it by not
           being lost yourself."
@@ -60,7 +60,7 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
-      <div className="w-3/4 mx-auto mt-20 p-10  rounded-2xl shadow-2xl">
+      <div className="w-3/4 mx-auto mt-20 p-10 bg-white border-2 border-black rounded-2xl shadow-2xl">
         <h1 className="text-3xl pt-5 text-black font-bold text-center">
           I am photographer by passion, and here are some of the services I
           provide.

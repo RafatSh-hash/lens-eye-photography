@@ -12,7 +12,7 @@ const AllServices = () => {
   const services = useLoaderData();
   return (
     <div>
-      <h1 className="text-3xl text-blue-400 text-center mt-10">
+      <h1 className="text-3xl text-blue-600 font-bold text-center mt-10">
         There are total {services?.length} services I provide. Please check them
         Out
       </h1>

@@ -59,12 +59,16 @@ const Navigation = () => {
             {user ? (
               <>
                 <div className="flex">
-                  <Button onClick={handleLogOut} gradientDuoTone="purpleToBlue">
+                  <Button
+                    onClick={handleLogOut}
+                    outline={true}
+                    gradientDuoTone="purpleToBlue"
+                  >
                     Log Out
                   </Button>
                   <Toaster />
                   <img
-                    className="w-10 h-10 rounded-full mx-3"
+                    className="w-10 h-10 hover:w-11 hover:h-11 rounded-full mx-3"
                     src={user?.photoURL}
                     alt=""
                   />

@@ -62,7 +62,7 @@ const AddService = () => {
       </div>
       <form
         onSubmit={handleAddService}
-        className="flex w-3/4 bg-blue-200 rounded-2xl shadow-2xl p-10  mx-auto mt-10 flex-col gap-4"
+        className="flex w-3/4 bg-blue-400 border-2 border-black rounded-2xl shadow-2xl p-10  mx-auto mt-10 flex-col gap-4"
       >
         <div>
           <div className="mb-2 block">
@@ -142,7 +142,7 @@ const AddService = () => {
           </div>
         </div>
         <div className="w-1/4 mx-auto">
-          <Button type="submit" gradientMonochrome="info">
+          <Button type="submit" gradientDuoTone="purpleToBlue">
             Add Service
           </Button>
           <Toaster />

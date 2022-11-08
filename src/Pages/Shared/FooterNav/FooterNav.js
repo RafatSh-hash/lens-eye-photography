@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../../Assets/logo.jpg";
 const FooterNav = () => {
   return (
@@ -6,17 +7,17 @@ const FooterNav = () => {
       <footer class="p-4 bg-blue-300 sm:p-6 dark:bg-gray-900">
         <div class="md:flex md:justify-evenly">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" class="flex items-center">
+            <Link to="/home" class="flex items-center">
               <img
                 className="rounded-full w-16 h-16"
                 src={logo}
                 class="mr-3 h-8"
                 alt="FlowBite Logo"
               />
-              <span class="self-center mx-3 text-red-500 text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span class="self-center mx-3 text-blue-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Lens Eye Photography
               </span>
-            </a>
+            </Link>
           </div>
 
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -24,7 +25,7 @@ const FooterNav = () => {
               <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
                 Resources
               </h2>
-              <ul class="text-white dark:text-gray-400">
+              <ul class="text-gray-800 dark:text-gray-400">
                 <li class="mb-4">
                   <a href="https://flowbite.com/" class="hover:underline">
                     Our Community
@@ -41,7 +42,7 @@ const FooterNav = () => {
               <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-black">
                 Follow us
               </h2>
-              <ul class="text-white dark:text-gray-400">
+              <ul class="text-gray-800 dark:text-gray-400">
                 <li class="mb-4">
                   <a
                     href="https://github.com/themesberg/flowbite"
@@ -64,7 +65,7 @@ const FooterNav = () => {
               <h2 class="mb-6 text-sm font-semibold text-white uppercase dark:text-white">
                 Legal
               </h2>
-              <ul class="text-white dark:text-gray-400">
+              <ul class="text-gray-800 dark:text-gray-400">
                 <li class="mb-4">
                   <a href="#" class="hover:underline">
                     Privacy Policy
