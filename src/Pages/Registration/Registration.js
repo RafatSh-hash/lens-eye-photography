@@ -64,10 +64,13 @@ const Registration = () => {
   };
   return (
     <div>
-      <div className="lg:flex lg:flex-row md:flex md:flex-col sm:flex sm:flex-col w-11/12 mt-10  mx-auto h-auto items-center justify-evenly">
-        <div data-aos="flip-right" className="lg:w-1/4 md:w-1/4 sm:w-full">
+      <div className="lg:flex lg:flex-row  md:flex md:flex-col sm:flex sm:flex-col w-11/12 mt-10  mx-auto h-auto items-center justify-evenly">
+        <div
+          data-aos="flip-right"
+          className="border-2 border-blue-500 rounded-2xl lg:w-1/3 md:w-1/4 sm:w-full"
+        >
           <form
-            className="bg-white shadow-lg shadow-gray-400 rounded-2xl py-5 px-5"
+            className="bg-blue-100 shadow-lg shadow-gray-400 rounded-2xl py-5 px-5"
             onSubmit={handleSignUp}
           >
             <div className="mb-6">
@@ -121,11 +124,8 @@ const Registration = () => {
               />
             </div>
             <p className="text-red-600">{error}</p>
-            <div className="py-3">
-              <Link
-                to={"/login"}
-                className="text-center text-small text-blue-500"
-              >
+            <div className="py-3 text-center">
+              <Link to={"/login"} className=" text-small text-blue-500">
                 Already a Member ? Please Login
               </Link>
             </div>

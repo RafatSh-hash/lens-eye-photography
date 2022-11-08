@@ -91,16 +91,14 @@ const Login = () => {
                 name="password"
                 type="password"
                 id="password"
+                placeholder="**********"
                 className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 required
               />
             </div>
             <p className="text-red-600">{error}</p>
-            <div className="py-3">
-              <Link
-                to={"/register"}
-                className="text-center text-small text-blue-500 px-4"
-              >
+            <div className="py-3 text-center ">
+              <Link to={"/register"} className="text-small text-blue-500 px-4">
                 New Here ? Please Register
               </Link>
             </div>
