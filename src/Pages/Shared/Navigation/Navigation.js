@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import logo from "../../../Assets/logo1.png";
 import { AuthContext } from "../../../Context/Context";
 import {
+  FaArrowLeft,
   FaArrowRight,
   FaBeer,
   FaDoorOpen,
@@ -69,7 +70,7 @@ const Navigation = () => {
                   <Button onClick={handleLogOut} gradientMonochrome="failure">
                     <div className="flex h-5 items-center">
                       <p>Log Out</p>
-                      <FaArrowRight></FaArrowRight>
+                      <FaArrowLeft></FaArrowLeft>
                     </div>
                   </Button>
                   <Toaster />
@@ -86,7 +87,12 @@ const Navigation = () => {
               <>
                 <div className="flex">
                   <Link className="mx-2" to={"/login"}>
-                    <Button gradientDuoTone="purpleToBlue">Log In</Button>
+                    <Button gradientDuoTone="purpleToBlue">
+                      <div className="flex h-5 items-center">
+                        <p>Log Out</p>
+                        <FaArrowRight></FaArrowRight>
+                      </div>
+                    </Button>
                   </Link>
                   <Link className="mx-2" to={"/register"}>
                     <Button gradientDuoTone="purpleToBlue">

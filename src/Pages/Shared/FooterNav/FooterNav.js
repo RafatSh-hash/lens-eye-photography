@@ -4,7 +4,7 @@ import logo from "../../../Assets/logo1.png";
 const FooterNav = () => {
   return (
     <div className="mt-20">
-      <footer class="p-4 bg-blue-300 sm:p-6 dark:bg-gray-900">
+      <footer class="p-4 bg-blue-400 sm:p-6 dark:bg-gray-900">
         <div class="md:flex flex-row-reverse md:justify-evenly">
           <div class="mb-6 md:mb-0">
             <Link to="/home" class="flex items-center">
