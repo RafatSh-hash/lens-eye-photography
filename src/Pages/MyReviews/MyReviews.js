@@ -5,6 +5,8 @@ import { useState } from "react";
 import { AuthContext } from "../../Context/Context";
 import useTitle from "../../Hooks/useTitle";
 import ReviewDiv from "./ReviewDiv";
+import { confirmAlert } from "react-confirm-alert"; // Import
+import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 const MyReviews = () => {
   useTitle("My Reviews");
@@ -12,10 +14,25 @@ const MyReviews = () => {
   const [reviews, setReviews] = useState([]);
 
   const handleDelete = (_id) => {
-    const agree = window.confirm(
-      "Are you sure you want to delete the review ?"
-    );
-    if (agree) {
+    // const agree = window.confirm(
+    //   "Are you sure you want to delete the review ?"
+    // );
+    confirmAlert({
+      title: "Confirm to submit",
+      message: "Are you sure to do this.",
+      buttons: [
+        {
+          label: "Yes",
+          onClick: () => alert("Click Yes"),
+        },
+        {
+          label: "No",
+          onClick: () => alert("Click No"),
+        },
+      ],
+    });
+
+    if (confirmAlert) {
       fetch(`http://localhost:1000/reviews/${_id}`, {
         method: "DELETE",
       })
