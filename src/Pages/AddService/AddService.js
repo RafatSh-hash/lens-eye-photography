@@ -2,12 +2,14 @@ import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import React, { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { FaPlusCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import useTitle from "../../Hooks/useTitle";
 
 const AddService = () => {
   useTitle("Add Service");
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleAddService = (event) => {
     event.preventDefault();
@@ -48,6 +50,7 @@ const AddService = () => {
             position: "top-center",
           });
           form.reset();
+          navigate("/allservices");
         }
       });
   };

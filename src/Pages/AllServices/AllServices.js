@@ -8,6 +8,7 @@ import useTitle from "../../Hooks/useTitle";
 
 const AllServices = () => {
   //Loading All Services
+
   useTitle("All Services");
   AOS.init({ duration: 500 });
   const services = useLoaderData();
