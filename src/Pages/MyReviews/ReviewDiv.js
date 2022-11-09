@@ -23,7 +23,7 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
           Delete
         </Button>
       </div>
-      <div className="flex justify-start h-14 items-center">
+      <div className="flex justify-start h-14 mx-3 items-center">
         <img className="w-10 h-10 rounded-full " src={photoURL} alt="" />
         <p className="mx-2">{Username}</p>
       </div>

@@ -82,6 +82,8 @@ const Details = () => {
       <h1 className="text-2xl mt-10 text-center py-10 text-black">
         Reviews are shown below about {service.name}
       </h1>
+
+      {/* Add A review */}
       <div className="w-1/2 mx-auto">
         <form onSubmit={addReview} className="flex flex-col gap-4">
           <div>
