@@ -7,7 +7,7 @@ const Blog = () => {
   return (
     <div className="p-5 mt-0">
       {/* <h1>Hello Blog</h1> */}
-      <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
+      <div className="border-2 border-slate-900 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-4/6 mx-auto mt-10">
         <h3 className="font-semibold ">
           Ques : What is the difference between
           <span className="text-red-500"> SQL</span> and{" "}
@@ -35,7 +35,7 @@ const Blog = () => {
           programming environments, despite relative recency.
         </p>
       </div>
-      <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
+      <div className="border-2 border-slate-900 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-4/6 mx-auto mt-10">
         <h3 className="font-semibold ">
           Ques : What are the difference between
           <span className="text-red-500"> Javascript</span> and
@@ -74,7 +74,7 @@ const Blog = () => {
           Internet of Things.
         </p>
       </div>
-      <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
+      <div className="border-2 border-slate-900 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-4/6 mx-auto mt-10">
         <h3 className="font-semibold ">
           Ques : What is
           <span className="text-red-500"> JWT </span> and how does it work ?
@@ -94,7 +94,7 @@ const Blog = () => {
           xxxxx.yyyyy.zzzzz.
         </p>
       </div>
-      <div className="border-2 border-slate-400 shadow-gray-600 shadow-lg rounded-2xl p-4 text-left w-4/6 mx-auto mt-10">
+      <div className="border-2 border-slate-900 bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-4/6 mx-auto mt-10">
         <h3 className="font-semibold ">
           Ques : How does
           <span className="text-red-500"> Node.js </span> handle multiple
