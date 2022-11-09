@@ -89,7 +89,7 @@ const Navigation = () => {
                   <Link className="mx-2" to={"/login"}>
                     <Button gradientDuoTone="purpleToBlue">
                       <div className="flex h-5 items-center">
-                        <p>Log Out</p>
+                        <p className="mx-3">Log Out</p>
                         <FaArrowRight></FaArrowRight>
                       </div>
                     </Button>
@@ -97,7 +97,7 @@ const Navigation = () => {
                   <Link className="mx-2" to={"/register"}>
                     <Button gradientDuoTone="purpleToBlue">
                       <div className="flex h-5 items-center">
-                        <p className="mx-2">Register</p>
+                        <p className="mx-3">Register</p>
                         <FaSign></FaSign>
                       </div>
                     </Button>
