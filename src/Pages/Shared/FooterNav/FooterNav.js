@@ -5,7 +5,7 @@ const FooterNav = () => {
   return (
     <div className="mt-20">
       <footer class="p-4 bg-blue-300 sm:p-6 dark:bg-gray-900">
-        <div class="md:flex md:justify-evenly">
+        <div class="md:flex flex-row-reverse md:justify-evenly">
           <div class="mb-6 md:mb-0">
             <Link to="/home" class="flex items-center">
               <div className="rounded-full w-[30px] h-[30px]">
@@ -15,7 +15,7 @@ const FooterNav = () => {
                   alt="FlowBite Logo"
                 />
               </div>
-              <span class="self-center mx-3 text-blue-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
+              <span class="self-center mx-3 text-blue-800 text-2xl  font-semibold whitespace-nowrap dark:text-white">
                 Lens Eye Photography
               </span>
             </Link>

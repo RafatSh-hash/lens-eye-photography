@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       <Toaster></Toaster>
       {/* Card Section */}
-      <div className="w-3/4 mx-auto border-2 border-black mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl">
+      <div className="w-3/4 mx-auto border-2 border-black mt-20 mb-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl drop-shadow-lg shadow-slate-500">
         <h1 className="text-5xl pt-5 text-blue-700 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
           fine pictures of a very wonderful subject; you cannot do it by not

@@ -2,6 +2,7 @@ import { Button } from "flowbite-react";
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
+import { FaPenAlt, FaTrashAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
@@ -9,10 +10,10 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
     singlereview;
 
   return (
-    <div className="w-4/5 mx-auto mt-10 h-auto bg-slate-200 px-4 py-2 rounded-2xl items-center flex justify-evenly">
+    <div className="w-4/5 mx-auto mt-10 h-auto bg-slate-200 px-4 py-2 rounded-2xl items-center flex justify-between">
       <div className="mx-2">
         <Button onClick={() => handleDelete(_id)} color="failure" pill={true}>
-          Delete
+          <FaTrashAlt></FaTrashAlt>
         </Button>
       </div>
       <div className="flex justify-start h-14 mx-3 items-center">
@@ -25,10 +26,10 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
           <small>{review}</small>
         </div>
       </div>
-      <div>
+      <div className="w-[3rem]">
         <Link to={`/update/${_id}`}>
           <Button color="purple" pill={true}>
-            Update
+            <FaPenAlt></FaPenAlt>
           </Button>
         </Link>
       </div>

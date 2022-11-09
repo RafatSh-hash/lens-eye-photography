@@ -1,11 +1,12 @@
 import { Button, Card, Textarea } from "flowbite-react";
 import React from "react";
 import toast from "react-hot-toast";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
 
 const Update = () => {
   useTitle("Update Review");
+  const navigate = useNavigate();
   const oldReview = useLoaderData();
   const { _id, Username, email, photoURL, review, serviceName, service } =
     oldReview;
@@ -40,6 +41,7 @@ const Update = () => {
         if (data.modifiedCount > 0) {
           toast.success("Review Updated Successfully!");
           console.log(data);
+          navigate("/myreviews");
         }
       })
       .catch((e) => {

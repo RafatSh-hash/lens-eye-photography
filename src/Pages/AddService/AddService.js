@@ -1,6 +1,7 @@
 import { Button, Label, Textarea, TextInput } from "flowbite-react";
 import React, { useContext } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { FaPlusCircle } from "react-icons/fa";
 import { AuthContext } from "../../Context/Context";
 import useTitle from "../../Hooks/useTitle";
 
@@ -146,7 +147,10 @@ const AddService = () => {
         </div>
         <div className="w-1/4 mx-auto">
           <Button type="submit" gradientDuoTone="purpleToBlue">
-            Add Service
+            <div className="flex h-6 items-center">
+              <p className="mx-2"> Add Service</p>
+              <FaPlusCircle></FaPlusCircle>
+            </div>
           </Button>
           <Toaster />
         </div>

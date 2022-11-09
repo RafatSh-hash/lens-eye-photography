@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from "../../../Assets/logo1.png";
 import { AuthContext } from "../../../Context/Context";
+import {
+  FaArrowRight,
+  FaBeer,
+  FaDoorOpen,
+  FaSign,
+  FaSignInAlt,
+} from "react-icons/fa";
 
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -25,7 +32,7 @@ const Navigation = () => {
         <Navbar.Brand href="/home">
           <img src={logo} className="w-10 h-10 rounded-full" alt="" />
           <span className="self-center whitespace-nowrap  text-2xl dark:text-white font-bold px-3 text-blue-600">
-            LE-Photography
+            <i className="font-extrabold"> LE-Photography</i>
           </span>
         </Navbar.Brand>
 
@@ -60,7 +67,10 @@ const Navigation = () => {
               <>
                 <div className="flex">
                   <Button onClick={handleLogOut} gradientMonochrome="failure">
-                    Log Out
+                    <div className="flex h-5 items-center">
+                      <p>Log Out</p>
+                      <FaArrowRight></FaArrowRight>
+                    </div>
                   </Button>
                   <Toaster />
                   <Tooltip content={user?.displayName}>
@@ -79,7 +89,12 @@ const Navigation = () => {
                     <Button gradientDuoTone="purpleToBlue">Log In</Button>
                   </Link>
                   <Link className="mx-2" to={"/register"}>
-                    <Button gradientDuoTone="purpleToBlue">Register</Button>
+                    <Button gradientDuoTone="purpleToBlue">
+                      <div className="flex h-5 items-center">
+                        <p className="mx-2">Register</p>
+                        <FaSign></FaSign>
+                      </div>
+                    </Button>
                   </Link>
                   <Avatar rounded={true}></Avatar>
                 </div>
