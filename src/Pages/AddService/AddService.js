@@ -29,6 +29,7 @@ const AddService = () => {
       photoURL,
     };
 
+    //Add a service
     fetch("http://localhost:1000/services", {
       method: "POST",
       headers: {

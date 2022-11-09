@@ -14,16 +14,20 @@ const Home = () => {
   return (
     <div>
       <Toaster></Toaster>
+      {/* Card Section */}
       <div className="w-3/4 mx-auto border-2 border-black mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl">
         <h1 className="text-5xl pt-5 text-blue-700 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
           fine pictures of a very wonderful subject; you cannot do it by not
           being lost yourself."
           <div className="text-end ">
-            <span className="text-2xl text-red-600">- Dorothea Lange</span>
+            <span className="text-2xl text-red-600 text-small">
+              - Dorothea Lange
+            </span>
           </div>
         </h1>
       </div>
+      {/* Carousel Section */}
       <div className="w-3/4 mx-auto mt-10">
         <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
           <Carousel>
@@ -64,12 +68,14 @@ const Home = () => {
           </Carousel>
         </div>
       </div>
+      {/*Card Section */}
       <div className="w-3/4 mx-auto mt-20 p-10 bg-white border-2 border-black rounded-2xl shadow-2xl">
         <h1 className="text-3xl pt-5 text-black font-bold text-center">
           I am photographer by passion, and here are some of the services I
           provide.
         </h1>
       </div>
+      {/* Service Section */}
       <div className="w-3/4 mx-auto p-2 flex flex-wrap mt-10 gap-4">
         {services.map((service) => (
           <Service key={service._id} service={service}></Service>

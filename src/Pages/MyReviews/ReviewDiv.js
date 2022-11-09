@@ -8,14 +8,6 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
   const { _id, Username, email, photoURL, review, service, serviceName } =
     singlereview;
 
-  //   const [reviewService, setReviewService] = useState({});
-
-  //   useEffect(() => {
-  //     fetch(`http://localhost:1000/reviews/${_id}`)
-  //       .then((res) => res.json())
-  //       .then((data) => console.log(data));
-  //   }, []);
-
   return (
     <div className="w-4/5 mx-auto mt-10 h-auto bg-slate-200 px-4 py-2 rounded-2xl items-center flex justify-evenly">
       <div className="mx-2">

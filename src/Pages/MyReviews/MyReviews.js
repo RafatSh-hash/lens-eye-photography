@@ -13,10 +13,8 @@ const MyReviews = () => {
   const { user, logOut, setLoading } = useContext(AuthContext);
   const [reviews, setReviews] = useState([]);
 
+  //   Delete Review
   const handleDelete = (_id) => {
-    // const agree = window.confirm(
-    //   "Are you sure you want to delete the review ?"
-    // );
     confirmAlert({
       title: "Confirm to submit",
       message: "Are you sure to do this.",
@@ -51,8 +49,12 @@ const MyReviews = () => {
     }
   };
 
-  const handleUpdate = (id) => {};
+  //   Update Review
+  const handleUpdate = (id) => {
+    console.log("Update", id);
+  };
 
+  //Requesting Review by email query
   useEffect(() => {
     setLoading(true);
     fetch(`http://localhost:1000/reviews?email=${user?.email}`, {

@@ -17,11 +17,13 @@ const Context = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
 
+  //Create User by email & password
   const createUser = (email, password) => {
     setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  //Creating Google User
   const googleProvider = new GoogleAuthProvider();
 
   const googleLogin = () => {
@@ -29,17 +31,23 @@ const Context = ({ children }) => {
     return signInWithPopup(auth, googleProvider);
   };
 
+  //Login with registered credentials
   const loginWithEmailPass = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+
+  //User LogOUt Funtionality
   const logOut = () => {
     return signOut(auth);
   };
+
+  //Update User Profile
   const updateUserProfile = (profile) => {
     return updateProfile(auth.currentUser, profile);
   };
 
+  //Check user if the user changes route
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log("user changed", currentUser);

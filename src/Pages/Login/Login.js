@@ -11,15 +11,13 @@ import useTitle from "../../Hooks/useTitle";
 const Login = () => {
   useTitle("Login");
   AOS.init({ duration: 500 });
-
+  //getting the location pathname
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || "/";
   const [error, setError] = useState("");
   const { loginWithEmailPass, googleLogin, setUser } = useContext(AuthContext);
   const handleLogin = (event) => {
-    //getting the location pathname
-
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;

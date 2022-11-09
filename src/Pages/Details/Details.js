@@ -35,6 +35,7 @@ const Details = () => {
       email,
     };
 
+    //Adding Review
     fetch("http://localhost:1000/usersreview", {
       method: "POST",
       headers: {
@@ -53,6 +54,7 @@ const Details = () => {
       });
   };
 
+  //Fetch review
   useEffect(() => {
     fetch(`http://localhost:1000/review/${_id}`)
       .then((res) => res.json())
