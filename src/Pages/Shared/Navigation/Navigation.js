@@ -1,4 +1,4 @@
-import { Avatar, Button, Navbar } from "flowbite-react";
+import { Avatar, Button, Navbar, Tooltip } from "flowbite-react";
 import React, { useContext } from "react";
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
@@ -59,19 +59,17 @@ const Navigation = () => {
             {user ? (
               <>
                 <div className="flex">
-                  <Button
-                    onClick={handleLogOut}
-                    outline={true}
-                    gradientDuoTone="purpleToBlue"
-                  >
+                  <Button onClick={handleLogOut} gradientMonochrome="failure">
                     Log Out
                   </Button>
                   <Toaster />
-                  <img
-                    className="w-10 h-10 hover:w-11 hover:h-11 rounded-full mx-3"
-                    src={user?.photoURL}
-                    alt=""
-                  />
+                  <Tooltip content={user?.displayName}>
+                    <img
+                      className="w-11 h-11  rounded-full mx-3"
+                      src={user?.photoURL}
+                      alt=""
+                    />
+                  </Tooltip>
                 </div>
               </>
             ) : (
