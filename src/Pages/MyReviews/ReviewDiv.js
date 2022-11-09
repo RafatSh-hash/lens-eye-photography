@@ -26,7 +26,7 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
         </div>
       </div>
       <div>
-        <Link to={"/update"}>
+        <Link to={`/update/${_id}`}>
           <Button color="purple" pill={true}>
             Update
           </Button>
