@@ -33,6 +33,7 @@ const AddService = () => {
       method: "POST",
       headers: {
         "content-type": "application/json",
+        authorization: `Bearer ${localStorage.getItem("le-token")}`,
       },
       body: JSON.stringify(service),
     })

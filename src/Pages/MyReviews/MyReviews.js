@@ -35,6 +35,9 @@ const MyReviews = () => {
     if (confirmAlert) {
       fetch(`http://localhost:1000/reviews/${_id}`, {
         method: "DELETE",
+        headers: {
+          authorization: `Bearer ${localStorage.getItem("le-token")}`,
+        },
       })
         .then((res) => res.json())
         .then((data) => {
@@ -52,8 +55,17 @@ const MyReviews = () => {
 
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:1000/reviews?email=${user?.email}`)
-      .then((res) => res.json())
+    fetch(`http://localhost:1000/reviews?email=${user?.email}`, {
+      headers: {
+        authorization: `Bearer ${localStorage.getItem("le-token")}`,
+      },
+    })
+      .then((res) => {
+        if (res.status === 401 || res.status === 403) {
+          return logOut();
+        }
+        return res.json();
+      })
       .then((data) => {
         setReviews(data);
         setLoading(false);
