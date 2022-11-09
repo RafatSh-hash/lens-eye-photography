@@ -20,12 +20,12 @@ const Navigation = () => {
   };
 
   return (
-    <div>
+    <div className="shadow-xl">
       <Navbar fluid={true} rounded={true}>
         <Navbar.Brand href="/home">
           <img src={logo} className="w-10 h-10 rounded-full" alt="" />
           <span className="self-center whitespace-nowrap  text-2xl dark:text-white font-bold px-3 text-blue-600">
-            LEPhotography
+            LE-Photography
           </span>
         </Navbar.Brand>
 

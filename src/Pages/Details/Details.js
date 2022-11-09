@@ -18,29 +18,28 @@ const Details = () => {
   const addReview = (event) => {
     event.preventDefault();
     const form = event.target;
-    const serviceName = form.serviceName.value;
+
     const photoURL = user.photoURL;
     const Username = user.displayName;
     const review = form.review.value;
-    const serviceID = _id;
-    const userEmail = user.email;
+    const email = user?.email || "unregisterd";
 
-    console.log(serviceID, serviceName, photoURL, Username, review, userEmail);
-    const userReview = {
-      serviceID,
-      serviceName,
+    console.log(photoURL, Username, review, email);
+    const Review = {
+      service: _id,
+      serviceName: name,
       photoURL,
       Username,
       review,
-      userEmail,
+      email,
     };
 
-    fetch("http://localhost:1000/usersReview", {
+    fetch("http://localhost:1000/usersreview", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(userReview),
+      body: JSON.stringify(Review),
     })
       .then((res) => res.json())
       .then((data) => {
