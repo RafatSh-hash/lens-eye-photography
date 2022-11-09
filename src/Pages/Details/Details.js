@@ -5,6 +5,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import useTitle from "../../Hooks/useTitle";
+import Review from "./Review";
 
 const Details = () => {
   useTitle("Service Details");
@@ -51,6 +52,12 @@ const Details = () => {
       });
   };
 
+  useEffect(() => {
+    fetch(`http://localhost:1000/review/${_id}`)
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+
   return (
     <div>
       <h1 className="text-3xl my-10 text-center text-blue-500">
@@ -82,6 +89,21 @@ const Details = () => {
       <h1 className="text-2xl mt-10 text-center py-10 text-black">
         Reviews are shown below about {service.name}
       </h1>
+      {/* Show Reviews */}
+
+      <div>
+        {reviews?.length === 0 ? (
+          <p className="text-3xl text-red-400 text-center">
+            No reviews has been posted yet for {service.name}
+          </p>
+        ) : (
+          <div>
+            {reviews.map((rvw) => (
+              <Review key={rvw._id} rvw={rvw}></Review>
+            ))}
+          </div>
+        )}
+      </div>
 
       {/* Add A review */}
       <div className="w-1/2 mx-auto">
