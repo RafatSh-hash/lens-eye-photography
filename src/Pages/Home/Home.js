@@ -1,15 +1,19 @@
 import { Button, Carousel } from "flowbite-react";
+import { toast } from "material-react-toastify";
 import React from "react";
+import { Toaster } from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
 import Service from "../Services/Service";
 
 const Home = () => {
   useTitle("Lens Eye Photography");
+  toast.success("Welcome To Lens Eye Photography!");
   const services = useLoaderData();
 
   return (
     <div>
+      <Toaster></Toaster>
       <div className="w-3/4 mx-auto border-2 border-black mt-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl">
         <h1 className="text-5xl pt-5 text-blue-700 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
