@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../../Assets/logo.jpg";
+import logo from "../../../Assets/logo1.png";
 const FooterNav = () => {
   return (
     <div className="mt-20">
@@ -10,7 +10,7 @@ const FooterNav = () => {
             <Link to="/home" class="flex items-center">
               <div className="rounded-full w-[30px] h-[30px]">
                 <img
-                  className="w-full h-full rounded-full"
+                  className="w-full border-black border-2 h-full rounded-full"
                   src={logo}
                   alt="FlowBite Logo"
                 />

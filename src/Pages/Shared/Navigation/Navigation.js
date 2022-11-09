@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { Toaster } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
-import logo from "../../../Assets/logo.jpg";
+import logo from "../../../Assets/logo1.png";
 import { AuthContext } from "../../../Context/Context";
 
 const Navigation = () => {
