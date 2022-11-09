@@ -41,7 +41,7 @@ const AddService = () => {
         console.log(data);
 
         if (data.acknowleged) {
-          toast.success("service created successfully", {
+          toast.success("Service created successfully", {
             position: "top-center",
           });
           form.reset();

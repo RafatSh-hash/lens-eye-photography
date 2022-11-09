@@ -64,10 +64,12 @@ const Login = () => {
       .then((result) => {
         const googleUser = result.user;
         console.log(googleUser);
+        toast.success("Successfully Logged In!");
         navigate(from, { replace: true });
       })
       .catch((e) => {
         console.log(e);
+        toast.error("Wrong Credentials ");
         setError(e.message);
       });
   };
