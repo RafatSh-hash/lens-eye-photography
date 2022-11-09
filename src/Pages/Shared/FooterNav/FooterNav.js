@@ -8,12 +8,13 @@ const FooterNav = () => {
         <div class="md:flex md:justify-evenly">
           <div class="mb-6 md:mb-0">
             <Link to="/home" class="flex items-center">
-              <img
-                className="rounded-full w-16 h-16"
-                src={logo}
-                class="mr-3 h-8"
-                alt="FlowBite Logo"
-              />
+              <div className="rounded-full w-[30px] h-[30px]">
+                <img
+                  className="w-full h-full rounded-full"
+                  src={logo}
+                  alt="FlowBite Logo"
+                />
+              </div>
               <span class="self-center mx-3 text-blue-800 text-2xl font-semibold whitespace-nowrap dark:text-white">
                 Lens Eye Photography
               </span>

@@ -97,7 +97,7 @@ const Details = () => {
             No reviews has been posted yet for {service.name}
           </p>
         ) : (
-          <div>
+          <div className="flex flex-col-reverse">
             {reviews.map((rvw) => (
               <Review key={rvw._id} rvw={rvw}></Review>
             ))}
@@ -107,6 +107,11 @@ const Details = () => {
 
       {/* Add A review */}
       <div className="w-1/2 mx-auto">
+        <div className="my-10">
+          <h1 className="text-center font-bold text-2xl text-slate-500 ">
+            Add a review for {author}'s service.
+          </h1>
+        </div>
         <form onSubmit={addReview} className="flex flex-col gap-4">
           <div>
             <div className="mb-2 block">
