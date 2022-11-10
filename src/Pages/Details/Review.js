@@ -1,7 +1,6 @@
 import React from "react";
 
 const Review = ({ rvw }) => {
-  const { Username, photoURL, review } = rvw;
   return (
     <div className="my-2">
       <div className="w-3/5 mx-auto mt-10 h-auto bg-slate-200 px-4 py-2 rounded-2xl items-center flex justify-between">

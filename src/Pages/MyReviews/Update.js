@@ -28,7 +28,7 @@ const Update = () => {
     };
     console.log(updatedReview);
 
-    fetch(`http://localhost:1000/update/${_id}`, {
+    fetch(` https://le-server.vercel.app/update/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -21,17 +21,13 @@ const MyReviews = () => {
       buttons: [
         {
           label: "Yes",
-          onClick: () => alert("Click Yes"),
-        },
-        {
-          label: "No",
-          onClick: () => alert("Click No"),
+          onClick: () => "Click Yes",
         },
       ],
     });
 
     if (confirmAlert) {
-      fetch(`http://localhost:1000/reviews/${_id}`, {
+      fetch(` https://le-server.vercel.app/reviews/${_id}`, {
         method: "DELETE",
         headers: {
           authorization: `Bearer ${localStorage.getItem("le-token")}`,
@@ -57,7 +53,7 @@ const MyReviews = () => {
   //Requesting Review by email query
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:1000/reviews?email=${user?.email}`, {
+    fetch(` https://le-server.vercel.app/reviews?email=${user?.email}`, {
       headers: {
         authorization: `Bearer ${localStorage.getItem("le-token")}`,
       },

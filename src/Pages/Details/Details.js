@@ -36,7 +36,7 @@ const Details = () => {
     };
 
     //Adding Review
-    fetch("http://localhost:1000/usersreview", {
+    fetch(" https://le-server.vercel.app/usersreview", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -56,10 +56,10 @@ const Details = () => {
 
   //Fetch review
   useEffect(() => {
-    fetch(`http://localhost:1000/review/${_id}`)
+    fetch(` https://le-server.vercel.app/review/${_id}`)
       .then((res) => res.json())
       .then((data) => setReviews(data));
-  }, []);
+  }, [_id]);
 
   return (
     <div>

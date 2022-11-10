@@ -22,12 +22,12 @@ export const routes = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:1000/services"),
+        loader: () => fetch(" https://le-server.vercel.app/services"),
       },
       {
         path: "/home",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:1000/services"),
+        loader: () => fetch(" https://le-server.vercel.app/services"),
       },
       {
         path: "/login",
@@ -40,12 +40,12 @@ export const routes = createBrowserRouter([
       {
         path: "/allservices",
         element: <AllServices></AllServices>,
-        loader: () => fetch("http://localhost:1000/allservices"),
+        loader: () => fetch(" https://le-server.vercel.app/allservices"),
       },
       {
         path: "/allservices",
         element: <Service></Service>,
-        loader: () => fetch("http://localhost:1000/allservices"),
+        loader: () => fetch(" https://le-server.vercel.app/allservices"),
       },
       {
         path: "/blog",
@@ -63,7 +63,7 @@ export const routes = createBrowserRouter([
         path: "/services/:id",
         element: <Details></Details>,
         loader: ({ params }) => {
-          return fetch(`http://localhost:1000/services/${params.id}`);
+          return fetch(` https://le-server.vercel.app/services/${params.id}`);
         },
       },
       {
@@ -78,7 +78,7 @@ export const routes = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => {
-          return fetch(`http://localhost:1000/update/${params.id}`);
+          return fetch(` https://le-server.vercel.app/update/${params.id}`);
         },
       },
       {

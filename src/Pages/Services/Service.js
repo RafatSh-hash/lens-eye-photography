@@ -2,7 +2,7 @@ import { Button, Card } from "flowbite-react";
 import React from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useState } from "react";
+
 import { Link } from "react-router-dom";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
@@ -10,7 +10,6 @@ import "react-photo-view/dist/react-photo-view.css";
 const Service = ({ service }) => {
   const { _id, author, image, description, avatarimg, name, rating } = service;
 
-  const [services, setServices] = useState([]);
   AOS.init({ duration: 500 });
   return (
     <div

@@ -5,14 +5,7 @@ import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import logo from "../../../Assets/logo1.png";
 import { AuthContext } from "../../../Context/Context";
-import {
-  FaArrowLeft,
-  FaArrowRight,
-  FaBeer,
-  FaDoorOpen,
-  FaSign,
-  FaSignInAlt,
-} from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight, FaSign } from "react-icons/fa";
 
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
