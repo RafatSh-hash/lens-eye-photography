@@ -2,7 +2,7 @@ import { Button, Card, Label, TextInput } from "flowbite-react";
 import React, { useContext, useEffect } from "react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import useTitle from "../../Hooks/useTitle";
 import Review from "./Review";
@@ -109,65 +109,81 @@ const Details = () => {
       </div>
 
       {/* Add A review */}
-      <div className="w-1/2 mx-auto">
-        <div className="my-10">
-          <h1 className="text-center font-bold text-2xl text-slate-500 ">
-            Add a review for {author}'s service.
-          </h1>
-        </div>
-        <form onSubmit={addReview} className="flex flex-col gap-4">
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="small" value="User Name" />
-            </div>
-            <TextInput
-              defaultValue={user?.displayName}
-              readOnly
-              id="small"
-              type="text"
-              name="name"
-              sizing="sm"
-            />
-          </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="small" value="User Photo URL" />
-            </div>
-            <TextInput
-              defaultValue={user?.photoURL}
-              id="small"
-              type="text"
-              name="photoURL"
-              sizing="sm"
-            />
-          </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="base" value="Service Name" />
-            </div>
-            <TextInput
-              defaultValue={service.name}
-              readOnly
-              id="base"
-              type="text"
-              name="serviceName"
-              sizing="md"
-            />
-          </div>
-          <div>
-            <div className="mb-2 block">
-              <Label htmlFor="large" value="Review" />
-            </div>
-            <TextInput id="large" type="text" name="review" sizing="lg" />
-          </div>
+      {user ? (
+        <>
           <div className="w-1/2 mx-auto">
-            <Button type="submit" gradientMonochrome="info">
-              Submit
-            </Button>
-            <Toaster></Toaster>
+            <div className="my-10">
+              <h1 className="text-center font-bold text-2xl text-slate-500 ">
+                Add a review for {author}'s service.
+              </h1>
+            </div>
+            <form onSubmit={addReview} className="flex flex-col gap-4">
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="small" value="User Name" />
+                </div>
+                <TextInput
+                  defaultValue={user?.displayName}
+                  readOnly
+                  id="small"
+                  type="text"
+                  name="name"
+                  sizing="sm"
+                />
+              </div>
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="small" value="User Photo URL" />
+                </div>
+                <TextInput
+                  defaultValue={user?.photoURL}
+                  id="small"
+                  type="text"
+                  name="photoURL"
+                  sizing="sm"
+                />
+              </div>
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="base" value="Service Name" />
+                </div>
+                <TextInput
+                  defaultValue={service.name}
+                  readOnly
+                  id="base"
+                  type="text"
+                  name="serviceName"
+                  sizing="md"
+                />
+              </div>
+              <div>
+                <div className="mb-2 block">
+                  <Label htmlFor="large" value="Review" />
+                </div>
+                <TextInput id="large" type="text" name="review" sizing="lg" />
+              </div>
+              <div className="w-1/2 mx-auto">
+                <Button type="submit" gradientMonochrome="info">
+                  Submit
+                </Button>
+                <Toaster></Toaster>
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
+        </>
+      ) : (
+        <>
+          <div className="w-3/4 mx-auto my-10">
+            <h1 className="text-2xl text-center">
+              Please{" "}
+              <span className="text-blue-500">
+                <Link to={"/login"}>Login </Link>
+              </span>
+              to Add a Review for {service.name}
+            </h1>
+          </div>
+        </>
+      )}
     </div>
   );
 };

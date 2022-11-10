@@ -69,7 +69,7 @@ const Navigation = () => {
                 <div className="flex">
                   <Button onClick={handleLogOut} gradientMonochrome="failure">
                     <div className="flex h-5 items-center">
-                      <p>Log Out</p>
+                      <p>Sign Out</p>
                       <FaArrowLeft></FaArrowLeft>
                     </div>
                   </Button>
@@ -89,7 +89,7 @@ const Navigation = () => {
                   <Link className="mx-2" to={"/login"}>
                     <Button gradientDuoTone="purpleToBlue">
                       <div className="flex h-5 items-center">
-                        <p className="mx-3">Log Out</p>
+                        <p className="mx-3">Sign In</p>
                         <FaArrowRight></FaArrowRight>
                       </div>
                     </Button>

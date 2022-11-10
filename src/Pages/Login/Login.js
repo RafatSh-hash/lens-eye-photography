@@ -5,7 +5,6 @@ import ParticlesBg from "particles-bg";
 import toast, { Toaster } from "react-hot-toast";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
-
 import AOS from "aos";
 import useTitle from "../../Hooks/useTitle";
 const Login = () => {
