@@ -22,16 +22,18 @@ const ReviewDiv = ({ singlereview, handleDelete, handleUpdate }) => {
       </div>
       <div className="flex justify-evenly">
         <p>{serviceName}</p>
+      </div>
+      <div className="flex justify-between mx-2">
         <div>
           <small>{review}</small>
         </div>
-      </div>
-      <div className="w-[3rem]">
-        <Link to={`/update/${_id}`}>
-          <Button color="purple" pill={true}>
-            <FaPenAlt></FaPenAlt>
-          </Button>
-        </Link>
+        <div>
+          <Link to={`/update/${_id}`}>
+            <Button color="purple" pill={true}>
+              <FaPenAlt></FaPenAlt>
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

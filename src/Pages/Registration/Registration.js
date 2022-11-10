@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import Lottie from "lottie-react";
 import registration from "../../Assets/registration.json";
 import ParticlesBg from "particles-bg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Context/Context";
 import "react-toastify/dist/ReactToastify.css";
 import AOS from "aos";
@@ -13,6 +13,7 @@ import useTitle from "../../Hooks/useTitle";
 const Registration = () => {
   useTitle("Registration");
   AOS.init({ duration: 500 });
+  const navigate = useNavigate();
   const { createUser, updateUserProfile } = useContext(AuthContext);
   const [error, setError] = useState("");
   const handleSignUp = (event) => {
@@ -44,10 +45,13 @@ const Registration = () => {
         console.log(user);
         form.reset();
         handleUpdateUser(name, photoURL);
+        toast.success("Registration Successfull!!");
+        navigate("/home");
       })
       .catch((e) => {
         console.log(e);
-        setError(error.message);
+        setError(e.message);
+        toast.error("Try Again!");
       });
 
     const handleUpdateUser = (name, photoURL) => {

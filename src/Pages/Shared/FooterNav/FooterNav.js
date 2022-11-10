@@ -28,12 +28,18 @@ const FooterNav = () => {
               </h2>
               <ul class="text-gray-800 dark:text-gray-400">
                 <li class="mb-4">
-                  <a href="https://flowbite.com/" class="hover:underline">
+                  <a
+                    href="https://www.facebook.com/groups/programmingherocommunity/?mibextid=6NoCDW"
+                    class="hover:underline"
+                  >
                     Our Community
                   </a>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">
+                  <a
+                    href="https://web.programming-hero.com/success"
+                    class="hover:underline"
+                  >
                     Achievements
                   </a>
                 </li>
@@ -46,7 +52,7 @@ const FooterNav = () => {
               <ul class="text-gray-800 dark:text-gray-400">
                 <li class="mb-4">
                   <a
-                    href="https://github.com/themesberg/flowbite"
+                    href="https://github.com/programminghero1"
                     class="hover:underline "
                   >
                     Github
@@ -54,7 +60,7 @@ const FooterNav = () => {
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https://github.com/programminghero1"
                     class="hover:underline"
                   >
                     Discord
