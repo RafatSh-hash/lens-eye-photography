@@ -5,9 +5,12 @@ import { Toaster } from "react-hot-toast";
 import { Link, useLoaderData } from "react-router-dom";
 import useTitle from "../../Hooks/useTitle";
 import Service from "../Services/Service";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Home = () => {
   useTitle("Lens Eye Photography");
+  AOS.init({ duration: 500 });
   toast.success("Welcome To Lens Eye Photography!");
   const services = useLoaderData();
 
@@ -15,7 +18,10 @@ const Home = () => {
     <div>
       <Toaster></Toaster>
       {/* Card Section */}
-      <div className="w-3/4 mx-auto border-2 border-black mt-20 mb-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl drop-shadow-lg shadow-slate-500">
+      <div
+        data-aos="fade-up"
+        className="w-3/4 mx-auto border-2 border-black mt-20 mb-20 p-10 bg-gradient-to-bl from-blue-200 via-indigo-200 to-gray-400 rounded-2xl shadow-2xl drop-shadow-lg shadow-slate-500"
+      >
         <h1 className="text-5xl pt-5 text-blue-700 font-bold text-center">
           Let Your Photos Be Alive. "That frame of mind that you need to make
           fine pictures of a very wonderful subject; you cannot do it by not
@@ -28,7 +34,7 @@ const Home = () => {
         </h1>
       </div>
       {/* Carousel Section */}
-      <div className="w-3/4 mx-auto mt-10">
+      <div data-aos="fade-up" className="w-3/4 mx-auto mt-10">
         <div className="grid h-56 grid-cols-2 gap-4 sm:h-64 xl:h-80 2xl:h-96">
           <Carousel>
             <img

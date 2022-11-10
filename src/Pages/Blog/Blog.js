@@ -1,13 +1,17 @@
 import React from "react";
 import useTitle from "../../Hooks/useTitle";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 const Blog = () => {
+  AOS.init({ duration: 500 });
   useTitle("Blog");
   //Blog Page Ques And Answers
   return (
-    <div className="p-5 mt-0">
+    <div data-aos="fade-up" className="p-5 mt-0">
       {/* <h1>Hello Blog</h1> */}
       <div
+        data-aos="fade-up"
         id="div1"
         className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10"
       >
@@ -38,7 +42,10 @@ const Blog = () => {
           programming environments, despite relative recency.
         </p>
       </div>
-      <div className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10">
+      <div
+        data-aos="fade-up"
+        className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10"
+      >
         <h3 className="font-semibold ">
           Ques : What are the difference between
           <span className="text-red-500"> Javascript</span> and
@@ -77,7 +84,10 @@ const Blog = () => {
           Internet of Things.
         </p>
       </div>
-      <div className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10">
+      <div
+        data-aos="fade-up"
+        className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10"
+      >
         <h3 className="font-semibold ">
           Ques : What is
           <span className="text-red-500"> JWT </span> and how does it work ?
@@ -97,7 +107,10 @@ const Blog = () => {
           xxxxx.yyyyy.zzzzz.
         </p>
       </div>
-      <div className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10">
+      <div
+        data-aos="fade-up"
+        className="border-4 border-slate-900 border-double bg-gradient-to-bl from-blue-200 via-indigo-300 to-gray-300 shadow-gray-700 shadow-2xl rounded-2xl p-8 text-left w-5/6 mx-auto mt-10"
+      >
         <h3 className="font-semibold ">
           Ques : How does
           <span className="text-red-500"> Node.js </span> handle multiple
